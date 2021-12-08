@@ -20,9 +20,9 @@ export default {
   name: "TabBarItem",
   props: {
     path: String,
-    activecolor:{
+    activecolor: {
       type: String,
-      default: 'red'
+      default: "red"
     }
   },
   data() {
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     itemClick() {
-        this.$router.replace(this.path);
+      this.$router.replace(this.path);
     }
   },
   computed: {
@@ -41,8 +41,8 @@ export default {
       //拿到当前活跃的组建路由判断当中是否包含当前的路由路径
       return this.$route.path.indexOf(this.path) !== -1;
     },
-    activeStyle(){
-      return this.isActive?{color:this.activecolor}:{};
+    activeStyle() {
+      return this.isActive ? { color: this.activecolor } : {};
     }
   }
 };
@@ -54,5 +54,4 @@ export default {
   text-align: center;
   height: 49px;
 }
-
 </style>
